@@ -824,8 +824,6 @@ def save_certificates():
 
     if certificate_text:
         user_profile.certificates_text = certificate_text  # Ensure this assignment is correct
-
-    # Commit the changes to the database
     try:
         db.session.commit()
         app.logger.info(f"Certificate details saved successfully for user {user.id}")
