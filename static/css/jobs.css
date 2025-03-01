@@ -1,0 +1,268 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+.expect-section {
+  display :flex ;
+  flex-direction :column; /* Change to row for side-by-side layout */
+  border-radius :30px; /* Rounded corners */
+  padding :40px; /* Padding inside the border */
+  margin-top :30px; /* Space above this section from previous content */
+}
+.image-container { 
+  flex-basis :50%; /* Adjusted for side-by-side layout */
+  display :flex ; 
+  justify-content :center ; 
+  align-items :center;  
+}
+.image-container img { /* Added styles for images */
+  max-width :100%; /* Make sure image fits within its container */
+  height:auto ; /* Maintain aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  border-radius:10px; /* Optional rounded corners for images */
+}
+.responsibilities-border {
+  border-width: 5px; /* Border width */
+  border-style: solid; /* Solid border style */
+  border-image-source: linear-gradient(to right, #0000ff, #00f, #00ffff); /* Multicolored gradient */
+  border-image-slice: 1; /* Ensure the gradient fills the border */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  padding: 30px; /* Increased padding inside the border */
+  margin-top: 30px; /* Space above this section from previous content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect around the responsibilities section */
+}
+
+.title {
+  text-align: center; 
+  color: black; 
+  font-size: 3em; 
+  margin-top: 10px; 
+  margin-bottom: 50px; 
+}
+.content {
+  position: relative; 
+  z-index: 2; 
+  color: black; 
+  display: flex; 
+  height:auto; /* Allow height to adjust based on content */
+  min-height: 100vh; /* Minimum height to occupy full viewport */
+}
+.text-section {
+  flex-basis: 50%; 
+  padding-left: 40px; 
+  padding-right: 40px; 
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  font-size: x-large; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+.job-info {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero {
+  margin: 1rem;
+  font-size: xx-large;
+  color: black;
+  text-align: left;
+  padding: 3rem 1rem;
+}
+
+/* Add this CSS for typing effect and animation */
+.hero {
+  margin: 1rem;
+  font-size: xx-large;
+  color: 007;
+  text-align: left;
+  padding: 3rem 1rem;
+  overflow: hidden; /* Ensures no overflow during animation */
+  white-space: nowrap; /* Prevents text from wrapping */
+  animation: slideDown 0.5s ease forwards; /* Slide down animation */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px); /* Start slightly above */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1; /* End fully visible */
+    }
+}
+
+   /* General styling for the typing effect */
+   .typing-effect {
+white-space: nowrap; /* Prevent text from wrapping */
+overflow: hidden; /* Hides text until it's revealed */
+width: 0; /* Start with width of 0 for typing effect */
+animation: typing 4s steps(30, end) forwards; /* Typing animation only */
+caret-color: transparent; /* Hide caret */
+border-right: none; /* Remove any pseudo "cursor" border if it's applied */
+}
+
+/* Typing animation for larger screens */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; } /* Expand to full width of the container */
+}
+
+/* Optional: Reset focus outline or any browser default behaviors */
+.typing-effect:focus {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    font-size: 1.2rem; /* Reduce font size slightly */
+    padding: 2.5rem 1rem;
+  }
+
+  .job-info{
+  font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    /* text-align: center; Center-align text for better readability */
+    font-size: 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .typing-effect {
+    animation: typing 3s steps(25, end) forwards; /* Faster typing for smaller screens */
+  }
+
+  .job-info{
+    font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    font-size: .8rem; /* Further reduce font size */
+    padding: 1.5rem 0.5rem;
+  }
+
+  .typing-effect {
+    animation: typing 2.5s steps(20, end) forwards; /* Even faster typing */
+  }
+  .job-info{
+    font-size: 0.9rem;
+    }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item a {
+  text-decoration: none;
+  padding: 1rem;
+  color:black;
+  font-weight: bold;
+  display: block; /* Makes the entire grid-item clickable */
+  height: 100%; /* Ensures link covers the full grid-item */
+  width: 100%;
+}
+
+.grid-item:hover {
+  background-color: #0033cc;
+  color: white;
+  transform: translateY(-5px); /* Adds a lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item:hover a {
+  color: white; /* Ensures text remains visible on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    padding: 3rem;
+  }
+}
+
+/* Center the 16th Grid Item on Larger Screens */
+@media (min-width: 768px) {
+  .grid-item:nth-child(16) {
+    grid-column: 2; /* Keeps it centered */
+  }
+}
+
+
+
+.title {
+  text-align: center; 
+  color: black; 
+  font-size: 3em; 
+  margin-top: 10px; 
+  margin-bottom: 50px; 
+}
+.content {
+  position: relative; 
+  z-index: 2; 
+  color: black; 
+  display: flex; 
+  height:auto; /* Allow height to adjust based on content */
+  min-height: 100vh; /* Minimum height to occupy full viewport */
+}
+.text-section {
+  flex-basis: 50%; 
+  padding-left: 40px; 
+  padding-right: 40px; 
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  font-size: small; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+}
+h2 {
+ font-size :2em ; /* Consistent font size for subheadings */
+ margin-top :10px ; 
+ color :black ; 
+ margin-bottom :5px ; 
+}
+ul{
+color: black;
+}
+

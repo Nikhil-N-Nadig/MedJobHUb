@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+<head>
+    {% block title%}
+        Pharmacists | Medjobhub
+    {% endblock %}  
+    {% block link %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+<!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
+
+<h1 class="title">Pharmacists</h1>
+
+<div class="content">
+    <div class="text-section">
+        <h2>Description</h2> <!-- Subheading -->
+        <p style="font-size: x-large;">We are seeking dedicated pharmacists who are committed to providing exceptional pharmaceutical care. Pharmacists play a crucial role in healthcare by ensuring the safe and effective use of medications. They are responsible for dispensing prescriptions, providing drug information to patients and healthcare providers, and promoting health and wellness through education.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i13.jpg') }}
+        " alt="Pharmacist Responsibilities Image" id="image4"> <!-- Image for pharmacist responsibilities -->
+    </div>
+</div>
+
+<div class="expect-section" id="pharmacistExpectSection">
+    <!-- Image displayed separately -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i14.jpg') }}
+        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+    </div>
+
+    <!-- New container for Key Responsibilities with border -->
+    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
+         <!-- Moved h2 here -->
+         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
+         <p>As a pharmacist, your responsibilities will include:</p>
+         <ul style="text-align:left; font-size: x-large;">
+             <li>Reviewing and interpreting prescriptions to ensure accuracy.</li>
+             <li>Dispensing medications and providing instructions on their use.</li>
+             <li>Monitoring patient health and medication effectiveness.</li>
+             <li>Educating patients Jobs medications and potential side effects.</li>
+             <li>Collaborating with healthcare professionals to optimize patient care.</li>
+         </ul>
+     </div>
+
+</div>
+<script src="scripts.js"></script>
+
+<script>
+// Trigger animation for description on load
+window.addEventListener('load', function() {
+   const descriptionSection = document.querySelector('.text-section');
+   descriptionSection.classList.add('visible'); // Add visible class when page loads
+   const imageContainer = document.querySelector('.image-container');
+   imageContainer.classList.add('visible'); // Add visible class to image container
+});
+
+window.addEventListener('scroll', function() {
+   const expectSection = document.getElementById('pharmacistExpectSection');
+   const rect = expectSection.getBoundingClientRect();
+   const windowHeight = window.innerHeight;
+
+   if (rect.top <= windowHeight && rect.bottom >= 0) {
+       expectSection.classList.add('visible'); // Add visible class when in view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.add('visible'); // Add visible class when in view
+   } else {
+       expectSection.classList.remove('visible'); // Remove visible class when out of view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.remove('visible'); // Remove visible class when out of view
+   }
+});
+</script>
+{% endblock %}
+</body>
+</html>

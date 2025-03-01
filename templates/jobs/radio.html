@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+<head>
+    {% block title%}
+        Radiologists | Medjobhub
+    {% endblock %}
+    {% block link %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+<!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
+
+<h1 class="title">Radiologists</h1>
+<div class="content">
+    <div class="text-section">
+        <h2>Description</h2> <!-- Subheading -->
+        <p style="font-size: x-large;">We are seeking skilled radiologists who are dedicated to providing high-quality imaging services. Radiologists play a crucial role in diagnosing and treating medical conditions through imaging techniques such as X-rays, MRIs, CT scans, and ultrasounds. They interpret imaging results and collaborate with healthcare teams to ensure accurate diagnoses and effective treatment plans.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i27.jpg') }}
+        " alt="Radiologist Responsibilities Image" id="image4"> <!-- Image for radiologist responsibilities -->
+    </div>
+</div>
+
+<div class="expect-section" id="radiologistExpectSection">
+    <!-- Image displayed separately -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i28.jpg') }}
+        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+    </div>
+
+    <!-- New container for Key Responsibilities with border -->
+    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
+         <!-- Moved h2 here -->
+         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
+         <p>As a radiologist, your responsibilities will include:</p>
+         <ul style="text-align:left; font-size: x-large;">
+             <li>Performing diagnostic imaging procedures.</li>
+             <li>Interpreting imaging results and providing reports.</li>
+             <li>Collaborating with referring physicians on patient care.</li>
+             <li>Ensuring quality control in imaging practices.</li>
+             <li>Participating in ongoing education and training in radiology advancements.</li>
+         </ul>
+     </div>
+
+</div>
+
+<script src="scripts.js"></script>
+
+<script>
+// Trigger animation for description on load
+window.addEventListener('load', function() {
+   const descriptionSection = document.querySelector('.text-section');
+   descriptionSection.classList.add('visible'); // Add visible class when page loads
+   const imageContainer = document.querySelector('.image-container');
+   imageContainer.classList.add('visible'); // Add visible class to image container
+});
+
+window.addEventListener('scroll', function() {
+   const expectSection = document.getElementById('radiologistExpectSection');
+   const rect = expectSection.getBoundingClientRect();
+   const windowHeight = window.innerHeight;
+
+   if (rect.top <= windowHeight && rect.bottom >= 0) {
+       expectSection.classList.add('visible'); // Add visible class when in view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.add('visible'); // Add visible class when in view
+   } else {
+       expectSection.classList.remove('visible'); // Remove visible class when out of view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.remove('visible'); // Remove visible class when out of view
+   }
+});
+</script>
+{% endblock %}
+</body>
+</html>

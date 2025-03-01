@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+<head>
+    {% block title%}
+        MBBS Doctors | Medjobhub
+    {% endblock %}
+    <title>MBBS Doctors | Medjobhub</title>
+    {% block link %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+<!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
+
+<h1 class="title">MBBS Doctors</h1>
+
+<div class="content">
+    <div class="text-section">
+        <h2>Description</h2> <!-- Subheading -->
+        <p style="font-size: x-large;">We are seeking dedicated MBBS doctors who are passionate Jobs providing high-quality healthcare. As an MBBS doctor, you will have completed your medical degree and be trained to diagnose and treat various health conditions. You will play a vital role in patient care and contribute to improving health outcomes in your community.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i5.jpg') }}
+        " alt="MBBS Responsibilities Image" id="image4"> <!-- Image for MBBS responsibilities -->
+    </div>
+</div>
+
+<div class="expect-section" id="mbbsExpectSection">
+    <!-- Image displayed separately -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i6.jpg') }}
+        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+    </div>
+
+    <!-- New container for Key Responsibilities with border -->
+    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
+         <!-- Moved h2 here -->
+         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
+         <p>As an MBBS doctor, your responsibilities will include:</p>
+         <ul style="text-align:left; font-size: x-large;">
+             <li>Conducting thorough examinations and diagnosing patients.</li>
+             <li>Developing treatment plans tailored to individual patient needs.</li>
+             <li>Providing preventive care and health education to patients.</li>
+             <li>Collaborating with specialists when necessary.</li>
+             <li>Staying updated with advancements in medical science and technology.</li>
+         </ul>
+     </div>
+
+</div>
+
+<script src="scripts.js"></script>
+
+<script>
+// Trigger animation for description on load
+window.addEventListener('load', function() {
+   const descriptionSection = document.querySelector('.text-section');
+   descriptionSection.classList.add('visible'); // Add visible class when page loads
+   const imageContainer = document.querySelector('.image-container');
+   imageContainer.classList.add('visible'); // Add visible class to image container
+});
+
+window.addEventListener('scroll', function() {
+   const expectSection = document.getElementById('mbbsExpectSection');
+   const rect = expectSection.getBoundingClientRect();
+   const windowHeight = window.innerHeight;
+
+   if (rect.top <= windowHeight && rect.bottom >= 0) {
+       expectSection.classList.add('visible'); // Add visible class when in view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.add('visible'); // Add visible class when in view
+   } else {
+       expectSection.classList.remove('visible'); // Remove visible class when out of view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.remove('visible'); // Remove visible class when out of view
+   }
+});
+</script>
+{% endblock %}
+</body>
+</html>

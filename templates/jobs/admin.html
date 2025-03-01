@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+<head>
+    {% block title%}
+      Administrators | Medjobhub
+    {% endblock %}
+
+    {% block link %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+    
+</head>
+
+<body>
+  {% block content %}
+
+<!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
+
+<h1 class="title">Administrators</h1>
+
+<div class="content">
+    <div class="text-section">
+        <h2>Description</h2> <!-- Subheading -->
+        <p style="font-size: x-large;">We are seeking organized and efficient administrators who are dedicated to ensuring smooth operations within healthcare facilities. Administrators play a crucial role in managing staff, coordinating services, and overseeing administrative functions. They are responsible for maintaining compliance with regulations and ensuring that patient care is delivered effectively.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i25.jpg') }}
+        " alt="Administrator Responsibilities Image" id="image4"> <!-- Image for administrator responsibilities -->
+    </div>
+</div>
+
+<div class="expect-section" id="adminExpectSection">
+    <!-- Image displayed separately -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i26.jpg') }}
+        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+    </div>
+
+    <!-- New container for Key Responsibilities with border -->
+    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
+         <!-- Moved h2 here -->
+         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
+         <p>As an administrator in a healthcare setting, your responsibilities will include:</p>
+         <ul style="text-align:left; font-size: x-large;">
+             <li>Managing daily operations of healthcare facilities.</li>
+             <li>Coordinating between departments to ensure efficient service delivery.</li>
+             <li>Overseeing staff recruitment and performance management.</li>
+             <li>Ensuring compliance with healthcare regulations and standards.</li>
+             <li>Implementing policies and procedures to improve patient care.</li>
+         </ul>
+     </div>
+
+</div>
+
+<script src="scripts.js"></script>
+
+<script>
+// Trigger animation for description on load
+window.addEventListener('load', function() {
+   const descriptionSection = document.querySelector('.text-section');
+   descriptionSection.classList.add('visible'); // Add visible class when page loads
+   const imageContainer = document.querySelector('.image-container');
+   imageContainer.classList.add('visible'); // Add visible class to image container
+});
+
+window.addEventListener('scroll', function() {
+   const expectSection = document.getElementById('adminExpectSection');
+   const rect = expectSection.getBoundingClientRect();
+   const windowHeight = window.innerHeight;
+
+   if (rect.top <= windowHeight && rect.bottom >= 0) {
+       expectSection.classList.add('visible'); // Add visible class when in view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.add('visible'); // Add visible class when in view
+   } else {
+       expectSection.classList.remove('visible'); // Remove visible class when out of view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.remove('visible'); // Remove visible class when out of view
+   }
+});
+</script>
+{% endblock %}
+</body>
+</html>

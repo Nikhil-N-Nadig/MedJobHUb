@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+<head>
+    {% block title%}
+        Lab Technicians | Medjobhub
+    {% endblock %}
+    {% block link %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jobs.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+<!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
+
+<h1 class="title">Lab Technicians</h1>
+
+<div class="content">
+    <div class="text-section">
+        <h2>Description</h2> <!-- Subheading -->
+        <p style="font-size: x-large;">We are seeking skilled lab technicians who are dedicated to providing accurate and timely laboratory services. Lab technicians play a crucial role in the healthcare system by performing tests that help diagnose and treat various medical conditions. They are responsible for preparing samples, conducting tests, and analyzing results while ensuring compliance with safety and quality standards.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i15.jpg') }}
+        " alt="Lab Technician Responsibilities Image" id="image4"> <!-- Image for lab technician responsibilities -->
+    </div>
+</div>
+
+<div class="expect-section" id="labExpectSection">
+    <!-- Image displayed separately -->
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/i16.jpg') }}
+        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+    </div>
+
+    <!-- New container for Key Responsibilities with border -->
+    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
+         <!-- Moved h2 here -->
+         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
+         <p>As a lab technician, your responsibilities will include:</p>
+         <ul style="text-align:left; font-size: x-large;">
+             <li>Preparing and analyzing biological samples.</li>
+             <li>Conducting laboratory tests and recording results.</li>
+             <li>Maintaining laboratory equipment and ensuring proper functioning.</li>
+             <li>Adhering to safety protocols and quality control measures.</li>
+             <li>Collaborating with healthcare professionals to interpret test results.</li>
+         </ul>
+     </div>
+
+</div>
+
+<script src="scripts.js"></script>
+
+<script>
+// Trigger animation for description on load
+window.addEventListener('load', function() {
+   const descriptionSection = document.querySelector('.text-section');
+   descriptionSection.classList.add('visible'); // Add visible class when page loads
+   const imageContainer = document.querySelector('.image-container');
+   imageContainer.classList.add('visible'); // Add visible class to image container
+});
+
+window.addEventListener('scroll', function() {
+   const expectSection = document.getElementById('labExpectSection');
+   const rect = expectSection.getBoundingClientRect();
+   const windowHeight = window.innerHeight;
+
+   if (rect.top <= windowHeight && rect.bottom >= 0) {
+       expectSection.classList.add('visible'); // Add visible class when in view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.add('visible'); // Add visible class when in view
+   } else {
+       expectSection.classList.remove('visible'); // Remove visible class when out of view
+       
+       const imageContainer = expectSection.querySelector('.image-container');
+       imageContainer.classList.remove('visible'); // Remove visible class when out of view
+   }
+});
+</script>
+
+{% endblock %}
+</body>
+</html>
