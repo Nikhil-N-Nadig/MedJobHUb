@@ -18,11 +18,11 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">BAMS Doctors</h1>
+<h1 class="title" style="color:#2C3E50">BAMS Doctors</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking dedicated BAMS (Bachelor of Ayurvedic Medicine and Surgery) doctors who are passionate Jobs providing holistic healthcare. BAMS doctors have completed their degree in Ayurveda and are trained to diagnose and treat various health conditions using traditional Ayurvedic practices. They play an essential role in promoting wellness and preventive care through natural therapies.</p>
+        <p>We are seeking dedicated BAMS (Bachelor of Ayurvedic Medicine and Surgery) doctors who are passionate Jobs providing holistic healthcare. BAMS doctors have completed their degree in Ayurveda and are trained to diagnose and treat various health conditions using traditional Ayurvedic practices. They play an essential role in promoting wellness and preventive care through natural therapies.</p>
     </div>
 
     <div class="image-container">
@@ -31,28 +31,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="bamsExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i8.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container" >
+     <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a BAMS doctor, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Patient Assessment</h3>
+                <p>Conduct assessments and diagnose health conditions.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Treatment Planning</h3>
+                <p>Develop personalized treatments using Ayurvedic principles.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Preventive Care</h3>
+                <p>Provide diet, lifestyle, and holistic health counseling.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Therapies & Remedies</h3>
+                <p>Administer Ayurvedic therapies and herbal treatments.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Community Outreach</h3>
+                <p>Promote Ayurvedic health education and wellness programs.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a BAMS doctor, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Conducting patient assessments and diagnosing health issues.</li>
-             <li>Developing personalized treatment plans based on Ayurvedic principles.</li>
-             <li>Providing counseling on diet, lifestyle, and preventive care.</li>
-             <li>Administering Ayurvedic therapies and treatments.</li>
-             <li>Engaging in community health education initiatives.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">🌿 Healing Through Ayurveda! Step into a Rewarding BAMS Career! 🌍</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

@@ -15,11 +15,11 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Radiologists</h1>
+<h1 class="title" style="color:#2C3E50">Radiologists</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking skilled radiologists who are dedicated to providing high-quality imaging services. Radiologists play a crucial role in diagnosing and treating medical conditions through imaging techniques such as X-rays, MRIs, CT scans, and ultrasounds. They interpret imaging results and collaborate with healthcare teams to ensure accurate diagnoses and effective treatment plans.</p>
+        <p>We are seeking skilled radiologists who are dedicated to providing high-quality imaging services. Radiologists play a crucial role in diagnosing and treating medical conditions through imaging techniques such as X-rays, MRIs, CT scans, and ultrasounds. They interpret imaging results and collaborate with healthcare teams to ensure accurate diagnoses and effective treatment plans.</p>
     </div>
 
     <div class="image-container">
@@ -28,28 +28,41 @@
     </div>
 </div>
 
-<div class="expect-section" id="radiologistExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i28.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+
+    <div class="responsibilities-border" style="flex-basis:auto;">
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a radiologist, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Diagnostic Imaging</h3>
+                <p>Perform MRI, CT scans, X-rays, and ultrasounds to assess patient conditions.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Report Analysis</h3>
+                <p>Interpret imaging results and provide detailed reports for diagnosis.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Physician Collaboration</h3>
+                <p>Consult with doctors to recommend further medical investigations.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Quality Assurance</h3>
+                <p>Ensure imaging equipment operates efficiently and meets safety standards.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Continuous Learning</h3>
+                <p>Stay updated with emerging trends and advancements in radiology.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a radiologist, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Performing diagnostic imaging procedures.</li>
-             <li>Interpreting imaging results and providing reports.</li>
-             <li>Collaborating with referring physicians on patient care.</li>
-             <li>Ensuring quality control in imaging practices.</li>
-             <li>Participating in ongoing education and training in radiology advancements.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">🩻 See Beyond the Surface! Become a Radiology Expert & Diagnose with Precision! 🔬</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

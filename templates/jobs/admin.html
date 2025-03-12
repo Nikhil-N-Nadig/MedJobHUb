@@ -17,12 +17,12 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Administrators</h1>
+<h1 class="title" style="color:#2C3E50">Administrators</h1>
 
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking organized and efficient administrators who are dedicated to ensuring smooth operations within healthcare facilities. Administrators play a crucial role in managing staff, coordinating services, and overseeing administrative functions. They are responsible for maintaining compliance with regulations and ensuring that patient care is delivered effectively.</p>
+        <p>We are seeking organized and efficient administrators who are dedicated to ensuring smooth operations within healthcare facilities. Administrators play a crucial role in managing staff, coordinating services, and overseeing administrative functions. They are responsible for maintaining compliance with regulations and ensuring that patient care is delivered effectively.</p>
     </div>
 
     <div class="image-container">
@@ -31,28 +31,37 @@
     </div>
 </div>
 
-<div class="expect-section" id="adminExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i26.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-wrapper">
+        <div class="responsibilities-border">
+            <h2 class="key-responsibilities-title">Key Responsibilities and Opportunities</h2>
+            <p style="font-size: 20px ;white-space: nowrap;">As an administrator in a healthcare setting, your responsibilities will include:</p>
+            <section class="key-responsibilities">
+                <div class="responsibility-card">
+                    <h3>Patient Care</h3>
+                    <p>Provide excellent patient care by diagnosing and treating medical conditions.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Team Collaboration</h3>
+                    <p>Work closely with nurses, specialists, and support staff to ensure the best care.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Record Keeping</h3>
+                    <p>Maintain accurate patient records and ensure proper documentation.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Emergency Response</h3>
+                    <p>Quickly respond to medical emergencies and provide immediate treatment.</p>
+                </div>
+            </section>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As an administrator in a healthcare setting, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Managing daily operations of healthcare facilities.</li>
-             <li>Coordinating between departments to ensure efficient service delivery.</li>
-             <li>Overseeing staff recruitment and performance management.</li>
-             <li>Ensuring compliance with healthcare regulations and standards.</li>
-             <li>Implementing policies and procedures to improve patient care.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">🏢 Lead with Excellence! Become a Healthcare Administrator Today! 🌟</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

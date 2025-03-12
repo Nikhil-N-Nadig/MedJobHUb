@@ -15,12 +15,12 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Lab Technicians</h1>
+<h1 class="title" style="color:#2C3E50">Lab Technicians</h1>
 
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking skilled lab technicians who are dedicated to providing accurate and timely laboratory services. Lab technicians play a crucial role in the healthcare system by performing tests that help diagnose and treat various medical conditions. They are responsible for preparing samples, conducting tests, and analyzing results while ensuring compliance with safety and quality standards.</p>
+        <p>We are seeking skilled lab technicians who are dedicated to providing accurate and timely laboratory services. Lab technicians play a crucial role in the healthcare system by performing tests that help diagnose and treat various medical conditions. They are responsible for preparing samples, conducting tests, and analyzing results while ensuring compliance with safety and quality standards.</p>
     </div>
 
     <div class="image-container">
@@ -29,28 +29,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="labExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i16.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a lab technician, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Sample Preparation</h3>
+                <p>Collect, prepare, and analyze biological and chemical samples.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Lab Testing</h3>
+                <p>Conduct tests and experiments following standard procedures.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Equipment Maintenance</h3>
+                <p>Ensure laboratory instruments and tools are functioning properly.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Safety Compliance</h3>
+                <p>Follow strict safety protocols and maintain quality control.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Data Analysis</h3>
+                <p>Record, analyze, and report test results to healthcare professionals.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a lab technician, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Preparing and analyzing biological samples.</li>
-             <li>Conducting laboratory tests and recording results.</li>
-             <li>Maintaining laboratory equipment and ensuring proper functioning.</li>
-             <li>Adhering to safety protocols and quality control measures.</li>
-             <li>Collaborating with healthcare professionals to interpret test results.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">🔬 Precision & Care! Join as a Lab Technician & Drive Medical Innovation! 🏥</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

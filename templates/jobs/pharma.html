@@ -15,12 +15,12 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Pharmacists</h1>
+<h1 class="title" style="color:#2C3E50">Pharmacists</h1>
 
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking dedicated pharmacists who are committed to providing exceptional pharmaceutical care. Pharmacists play a crucial role in healthcare by ensuring the safe and effective use of medications. They are responsible for dispensing prescriptions, providing drug information to patients and healthcare providers, and promoting health and wellness through education.</p>
+        <p>We are seeking dedicated pharmacists who are committed to providing exceptional pharmaceutical care. Pharmacists play a crucial role in healthcare by ensuring the safe and effective use of medications. They are responsible for dispensing prescriptions, providing drug information to patients and healthcare providers, and promoting health and wellness through education.</p>
     </div>
 
     <div class="image-container">
@@ -29,28 +29,41 @@
     </div>
 </div>
 
-<div class="expect-section" id="pharmacistExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i14.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a pharmacist, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Prescription Review</h3>
+                <p>Ensure prescriptions are accurate and appropriate for patients.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Medication Dispensing</h3>
+                <p>Provide medications and clear instructions on proper use.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Patient Health Monitoring</h3>
+                <p>Track medication effectiveness and patient well-being.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Patient Education</h3>
+                <p>Inform patients about medications, usage, and side effects.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Healthcare Collaboration</h3>
+                <p>Work closely with doctors and healthcare teams for patient care.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a pharmacist, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Reviewing and interpreting prescriptions to ensure accuracy.</li>
-             <li>Dispensing medications and providing instructions on their use.</li>
-             <li>Monitoring patient health and medication effectiveness.</li>
-             <li>Educating patients Jobs medications and potential side effects.</li>
-             <li>Collaborating with healthcare professionals to optimize patient care.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">💊 Innovate & Heal! Join the Pharmaceuticals Industry & Shape the Future of Medicine! 🌍</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 <script src="scripts.js"></script>
 
 <script>

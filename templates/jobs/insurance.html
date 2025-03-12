@@ -16,11 +16,11 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Insurance Consultants</h1>
+<h1 class="title" style="color:#2C3E50">Insurance Consultants</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking knowledgeable and customer-focused insurance consultants who are dedicated to helping clients understand their insurance needs. Insurance consultants play a vital role in advising individuals and businesses on various insurance products and services. They assess client requirements and provide tailored solutions to ensure adequate coverage while navigating complex insurance policies.</p>
+        <p>We are seeking knowledgeable and customer-focused insurance consultants who are dedicated to helping clients understand their insurance needs. Insurance consultants play a vital role in advising individuals and businesses on various insurance products and services. They assess client requirements and provide tailored solutions to ensure adequate coverage while navigating complex insurance policies.</p>
     </div>
 
     <div class="image-container">
@@ -29,28 +29,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="insuranceExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i24.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As an insurance consultant, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Client Assessment</h3>
+                <p>Evaluate clients' insurance needs and suggest suitable coverage.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Policy Explanation</h3>
+                <p>Clearly explain policy details, benefits, and conditions to clients.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Claims Assistance</h3>
+                <p>Guide clients through the claims process and required documentation.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Industry Awareness</h3>
+                <p>Stay updated on industry trends, new policies, and regulatory changes.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Client Relations</h3>
+                <p>Build and maintain long-term relationships with clients.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As an insurance consultant, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Assessing clients' insurance needs and recommending appropriate coverage.</li>
-             <li>Explaining policy details and answering client inquiries.</li>
-             <li>Assisting clients with claims processes and documentation.</li>
-             <li>Staying informed Jobs industry trends and changes in regulations.</li>
-             <li>Building and maintaining strong relationships with clients.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">💰 Secure Health, Secure Lives! Join Our Insurance Team & Make a Difference! 🔍</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

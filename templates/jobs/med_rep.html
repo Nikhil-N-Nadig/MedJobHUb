@@ -17,11 +17,11 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Medical Representatives</h1>
+<h1 class="title" style="color:#2C3E50">Medical Representatives</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking dynamic and motivated medical representatives who are passionate Jobs promoting healthcare products and services. Medical representatives play a crucial role in bridging the gap between pharmaceutical companies and healthcare professionals. They are responsible for educating doctors and pharmacists Jobs new medications and therapies while ensuring compliance with industry regulations.</p>
+        <p>We are seeking dynamic and motivated medical representatives who are passionate Jobs promoting healthcare products and services. Medical representatives play a crucial role in bridging the gap between pharmaceutical companies and healthcare professionals. They are responsible for educating doctors and pharmacists Jobs new medications and therapies while ensuring compliance with industry regulations.</p>
     </div>
 
     <div class="image-container">
@@ -30,28 +30,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="medRepExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i18.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a medical representative, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Product Promotion</h3>
+                <p>Present and promote pharmaceutical products to healthcare professionals.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Relationship Management</h3>
+                <p>Build and maintain strong professional relationships with doctors and pharmacists.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Educational Presentations</h3>
+                <p>Conduct training sessions to educate healthcare providers on new products.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Market Research</h3>
+                <p>Analyze market trends and competitor strategies to refine sales approaches.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Industry Engagement</h3>
+                <p>Represent the company at medical conferences and trade shows.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a medical representative, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Promoting pharmaceutical products to healthcare professionals.</li>
-             <li>Building and maintaining relationships with doctors and pharmacists.</li>
-             <li>Conducting presentations to educate healthcare providers Jobs new products.</li>
-             <li>Gathering market intelligence and reporting on competitor activities.</li>
-             <li>Participating in conferences and trade shows to represent the company.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">📢 Bridge Science & Sales! Become a Medical Representative & Empower Healthcare! 💊</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

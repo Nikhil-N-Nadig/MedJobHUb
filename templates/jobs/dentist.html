@@ -16,12 +16,12 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Dentists</h1>
+<h1 class="title" style="color:#2C3E50">Dentists</h1>
 
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking dedicated dentists who are committed to providing excellent oral healthcare. Dentists play a crucial role in diagnosing and treating dental issues while promoting overall oral hygiene. They perform various procedures including examinations, cleanings, fillings, and extractions. Dentists also educate patients on preventive care and healthy habits.</p>
+        <p>We are seeking dedicated dentists who are committed to providing excellent oral healthcare. Dentists play a crucial role in diagnosing and treating dental issues while promoting overall oral hygiene. They perform various procedures including examinations, cleanings, fillings, and extractions. Dentists also educate patients on preventive care and healthy habits.</p>
     </div>
 
     <div class="image-container">
@@ -30,27 +30,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="dentistExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i10.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
-    </div>
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a dentist, your responsibilities will include:</p>
 
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a dentist, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Conducting comprehensive dental examinations and assessments.</li>
-             <li>Diagnosing dental diseases and developing treatment plans.</li>
-             <li>Performing restorative procedures such as fillings and crowns.</li>
-             <li>Educating patients Jobs oral hygiene and preventive care.</li>
-             <li>Staying updated with advancements in dental technology and techniques.</li>
-         </ul>
-     </div>
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Dental Examinations</h3>
+                <p>Conduct comprehensive dental assessments and check-ups.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Diagnosis & Treatment</h3>
+                <p>Identify dental diseases and develop effective treatment plans.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Restorative Procedures</h3>
+                <p>Perform fillings, crowns, and other restorative treatments.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Patient Education</h3>
+                <p>Guide patients on oral hygiene and preventive dental care.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Continuous Learning</h3>
+                <p>Stay updated with the latest advancements in dental technology.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slogan-section">
+        <h2 class="slogan">😁 Brighten Smiles, Change Lives! Join as a Dentist Today! 🦷✨</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

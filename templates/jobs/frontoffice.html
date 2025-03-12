@@ -15,11 +15,11 @@
 
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Front Office Desk</h1>
+<h1 class="title" style="color:#2C3E50">Front Office Desk</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are looking for organized and friendly front office desk personnel who are dedicated to providing excellent customer service in healthcare settings. Front office staff play a crucial role in managing patient interactions and ensuring smooth operations within medical facilities. They are responsible for greeting patients, scheduling appointments, handling inquiries, and maintaining patient records.</p>
+        <p>We are looking for organized and friendly front office desk personnel who are dedicated to providing excellent customer service in healthcare settings. Front office staff play a crucial role in managing patient interactions and ensuring smooth operations within medical facilities. They are responsible for greeting patients, scheduling appointments, handling inquiries, and maintaining patient records.</p>
     </div>
 
     <div class="image-container">
@@ -28,28 +28,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="frontOfficeExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i22.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
-    </div>
+<div class="responsibilities-container">
+  <div class="responsibilities-border" style="flex-basis:auto;"> 
+      <h2>Key Responsibilities and Opportunities</h2>
+      <p>As a front office desk personnel, your responsibilities will include:</p>
 
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a front office desk personnel, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Welcoming patients and visitors in a friendly manner.</li>
-             <li>Managing appointment schedules and patient flow.</li>
-             <li>Answering phone calls and addressing inquiries.</li>
-             <li>Maintaining accurate patient records and documentation.</li>
-             <li>Coordinating with medical staff to ensure efficient operations.</li>
-         </ul>
-     </div>
-
+      <div class="key-responsibilities">
+          <div class="responsibility-card">
+              <h3>Welcoming Visitors</h3>
+              <p>Greet and assist patients and guests in a professional manner.</p>
+          </div>
+          <div class="responsibility-card">
+              <h3>Appointment Management</h3>
+              <p>Schedule and manage patient appointments efficiently.</p>
+          </div>
+          <div class="responsibility-card">
+              <h3>Communication</h3>
+              <p>Answer phone calls, respond to inquiries, and direct patients accordingly.</p>
+          </div>
+          <div class="responsibility-card">
+              <h3>Record Keeping</h3>
+              <p>Maintain accurate patient records and ensure proper documentation.</p>
+          </div>
+          <div class="responsibility-card">
+              <h3>Coordination</h3>
+              <p>Work closely with medical staff to streamline front office operations.</p>
+          </div>
+      </div>
+  </div>
+  <div class="slogan-section">
+    <h2 class="slogan">📞 First Impressions Matter! Join Our Front Office Team & Welcome Patients with Care! 😊</h2>
+    <button class="apply-btn">Apply Now</button>
 </div>
+</div>
+
 
 <script src="scripts.js"></script>
 

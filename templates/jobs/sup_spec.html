@@ -16,7 +16,7 @@
 
 <!-- -- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> --> 
 
-<h1 class="title">Super Specialization</h1>
+<h1 class="title" style="color:#2C3E50">Super Specialization</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
@@ -28,26 +28,43 @@
     </div>
 </div>
 
-<div class="expect-section" id="expectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i2.jpg') }}
-        " alt="Key Responsibilities Image" id="image2">
-    </div>
-
-    <!-- New container for Key Responsibilities with border -->
+<div class="responsibilities-container">
+    
     <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
          <!-- Moved h2 here -->
          <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
          <p>As a super specialist, you will engage in various responsibilities that are crucial to your field. Here are some key responsibilities and opportunities:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Conduct advanced clinical practices and research.</li>
-             <li>Collaborate with healthcare professionals.</li>
-             <li>Mentor junior doctors and medical students.</li>
-             <li>Teach at medical institutions.</li>
-             <li>Handle complex cases requiring expert knowledge.</li>
-         </ul>
+         <div class="responsibilities-border" style="flex-basis:auto;"> 
+            
+            <div class="key-responsibilities">
+                <div class="responsibility-card">
+                    <h3>Advanced Clinical Practices</h3>
+                    <p>Conduct specialized procedures and diagnose complex conditions.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Medical Research</h3>
+                    <p>Engage in cutting-edge research to advance your field.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Collaboration</h3>
+                    <p>Work with multi-disciplinary teams to improve patient outcomes.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Mentorship & Teaching</h3>
+                    <p>Guide junior doctors and students in specialized training.</p>
+                </div>
+                <div class="responsibility-card">
+                    <h3>Complex Case Management</h3>
+                    <p>Handle rare and difficult medical cases requiring expert knowledge.</p>
+                </div>
+            </div>
+        </div>
+        
      </div>
+     <div class="slogan-section">
+        <h2 class="slogan">🏥 Elevate Healthcare! Become a Super Specialist & Transform Lives! ✨</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 
 </div>
 

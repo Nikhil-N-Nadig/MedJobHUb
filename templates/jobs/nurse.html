@@ -15,12 +15,12 @@
 {% block content %}
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Nurses</h1>
+<h1 class="title" style="color:#2C3E50">Nurses</h1>
 
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are seeking compassionate and skilled nurses who are dedicated to providing high-quality patient care. Nurses play a vital role in the healthcare system by assessing patient needs, administering medications, and collaborating with healthcare teams to ensure optimal patient outcomes. They are essential in promoting health education and preventive care in various healthcare settings.</p>
+        <p>We are seeking compassionate and skilled nurses who are dedicated to providing high-quality patient care. Nurses play a vital role in the healthcare system by assessing patient needs, administering medications, and collaborating with healthcare teams to ensure optimal patient outcomes. They are essential in promoting health education and preventive care in various healthcare settings.</p>
     </div>
 
     <div class="image-container">
@@ -29,28 +29,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="nurseExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i12.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a nurse, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Patient Assessments</h3>
+                <p>Monitor vital signs and conduct patient evaluations.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Medication Administration</h3>
+                <p>Administer prescribed medications and treatments.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Health Education</h3>
+                <p>Educate patients on disease prevention and health management.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Team Collaboration</h3>
+                <p>Work closely with physicians and healthcare teams for patient care.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Patient Records</h3>
+                <p>Maintain accurate documentation and patient history.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a nurse, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Conducting patient assessments and monitoring vital signs.</li>
-             <li>Administering medications and treatments as prescribed.</li>
-             <li>Educating patients Jobs health management and disease prevention.</li>
-             <li>Collaborating with physicians and other healthcare professionals.</li>
-             <li>Maintaining accurate patient records and documentation.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">❤️ Care, Compassion, Cure! Be the Heart of Healthcare as a Nurse! 🏥</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 

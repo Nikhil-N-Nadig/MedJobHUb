@@ -14,11 +14,11 @@
 {% block content %}
 <!-- <button class="back-button" onclick="window.location.href='{{ url_for('jobs') }}'">&#8592; Back</button> -->
 
-<h1 class="title">Paramedical Jobs</h1>
+<h1 class="title" style="color:#2C3E50">Paramedical Jobs</h1>
 <div class="content">
     <div class="text-section">
         <h2>Description</h2> <!-- Subheading -->
-        <p style="font-size: x-large;">We are looking for skilled paramedical professionals who are dedicated to providing essential healthcare services. Paramedical staff play a critical role in supporting doctors and nurses by performing diagnostic tests, assisting in patient care, and ensuring that medical facilities run smoothly. They are trained in specialized areas such as laboratory technology, radiology, physiotherapy, and emergency medical services.</p>
+        <p>We are looking for skilled paramedical professionals who are dedicated to providing essential healthcare services. Paramedical staff play a critical role in supporting doctors and nurses by performing diagnostic tests, assisting in patient care, and ensuring that medical facilities run smoothly. They are trained in specialized areas such as laboratory technology, radiology, physiotherapy, and emergency medical services.</p>
     </div>
 
     <div class="image-container">
@@ -27,28 +27,40 @@
     </div>
 </div>
 
-<div class="expect-section" id="paramedicalExpectSection">
-    <!-- Image displayed separately -->
-    <div class="image-container">
-        <img src="{{ url_for('static', filename='images/i20.jpg') }}
-        " alt="Key Responsibilities Image" id="image5"> <!-- Image for Key Responsibilities -->
+<div class="responsibilities-container">
+    <div class="responsibilities-border" style="flex-basis:auto;"> 
+        <h2>Key Responsibilities and Opportunities</h2>
+        <p>As a paramedical professional, your responsibilities will include:</p>
+
+        <div class="key-responsibilities">
+            <div class="responsibility-card">
+                <h3>Diagnostic Assistance</h3>
+                <p>Help conduct medical tests and diagnostic procedures.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Patient Care</h3>
+                <p>Support patient care and rehabilitation programs.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Equipment Management</h3>
+                <p>Maintain and ensure medical equipment is operational.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Health Education</h3>
+                <p>Educate patients on health management and preventive care.</p>
+            </div>
+            <div class="responsibility-card">
+                <h3>Team Collaboration</h3>
+                <p>Work with healthcare teams to improve patient outcomes.</p>
+            </div>
+        </div>
     </div>
-
-    <!-- New container for Key Responsibilities with border -->
-    <div class="responsibilities-border" style="flex-basis:auto;"> <!-- Added padding for spacing -->
-         <!-- Moved h2 here -->
-         <h2>Key Responsibilities and Opportunities</h2> <!-- Updated Subheading -->
-         <p>As a paramedical professional, your responsibilities will include:</p>
-         <ul style="text-align:left; font-size: x-large;">
-             <li>Assisting in diagnostic procedures and tests.</li>
-             <li>Providing support in patient care and rehabilitation.</li>
-             <li>Maintaining medical equipment and ensuring it is operational.</li>
-             <li>Educating patients Jobs health management and preventive care.</li>
-             <li>Collaborating with healthcare teams to improve patient outcomes.</li>
-         </ul>
-     </div>
-
+    <div class="slogan-section">
+        <h2 class="slogan">🚑 Fast, Skilled, Life-Saving! Join Our Paramedical Team Today! 💙</h2>
+        <button class="apply-btn">Apply Now</button>
+    </div>
 </div>
+
 
 <script src="scripts.js"></script>
 
